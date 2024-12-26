@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int numberOfBeams(vector<string>& bank) {
+        int prev=0,current,res=0;
+        for(int i=0;i<bank[0].size();i++)
+        {
+            prev+=bank[0][i]-'0';
+        }
+        for(int i=1;i<bank.size();i++)
+        {
+            current=0;
+            for(int j=0;j<bank[i].size();j++)
+            {
+                current+=bank[i][j]-'0';
+            }
+            if(current!=0)
+            {
+            res+=prev*current;
+            prev=current;
+            }
+        }
+        return res;
+    }
+};
