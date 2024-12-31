@@ -12,7 +12,7 @@ public:
         {
           char s=strs[0][j];
           for(i=1;i<strs.size();i++)
-          {
+          { 
             if(s!=strs[i][j])
             {
               c=-1;
